@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>Profile</h1>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Date Joined:</strong> {{ user.date_joined }}</p>
+    <p><strong>Last Updated:</strong> {{ user.last_login }}</p>
+    <p>
+        <a href="{% url 'dashboard' %}">Back to Dashboard</a> |
+        <a href="{% url 'logout' %}">Logout</a>
+    </p>
+</body>
+</html>
